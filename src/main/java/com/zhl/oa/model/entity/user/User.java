@@ -1,5 +1,11 @@
 package com.zhl.oa.model.entity.user;
 
+import com.zhl.oa.model.entity.attends.Attends;
+import com.zhl.oa.model.entity.dicuss.Discuss;
+import com.zhl.oa.model.entity.dicuss.Reply;
+import com.zhl.oa.model.entity.note.Note;
+import com.zhl.oa.model.entity.role.Role;
+import com.zhl.oa.model.entity.schedule.ScheduleList;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -107,7 +113,7 @@ public class User {
 
     private Integer holiday;   //请假天数
 
-   /* @ManyToOne()
+    @ManyToOne()
     @JoinColumn(name = "position_id")
     private Position position;	//外键关联 职位表
 
@@ -133,6 +139,6 @@ public class User {
     private List<Note> note;
 
     @OneToMany(mappedBy="user",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    private Set<Attends> aSet;*/
+    private Set<Attends> aSet;
 
 }
