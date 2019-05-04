@@ -69,4 +69,147 @@ public class Discuss {
             }
     )
     private Set<User> users;
+
+    public Discuss() {
+    }
+
+    public Long getDiscussId() {
+
+        return discussId;
+    }
+
+    public void setDiscussId(Long discussId) {
+        this.discussId = discussId;
+    }
+
+    public Long getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Long typeId) {
+        this.typeId = typeId;
+    }
+
+    public Long getStatusId() {
+        return statusId;
+    }
+
+    public void setStatusId(Long statusId) {
+        this.statusId = statusId;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
+
+    public Integer getVisitNum() {
+        return visitNum;
+    }
+
+    public void setVisitNum(Integer visitNum) {
+        this.visitNum = visitNum;
+    }
+
+    public Integer getAttachmentId() {
+        return attachmentId;
+    }
+
+    public void setAttachmentId(Integer attachmentId) {
+        this.attachmentId = attachmentId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public VoteList getVoteList() {
+        return voteList;
+    }
+
+    public void setVoteList(VoteList voteList) {
+        this.voteList = voteList;
+    }
+
+    public Set<Reply> getReplys() {
+        return replys;
+    }
+
+    public void setReplys(Set<Reply> replys) {
+        this.replys = replys;
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
+
+    public Discuss(Long typeId, Long statusId, Date createTime, Date modifyTime, Integer visitNum, Integer attachmentId, String title, String content, User user, VoteList voteList, Set<Reply> replys, Set<User> users) {
+
+        this.typeId = typeId;
+        this.statusId = statusId;
+        this.createTime = createTime;
+        this.modifyTime = modifyTime;
+        this.visitNum = visitNum;
+        this.attachmentId = attachmentId;
+        this.title = title;
+        this.content = content;
+        this.user = user;
+        this.voteList = voteList;
+        this.replys = replys;
+        this.users = users;
+    }
+
+    @Override
+    public String toString() {
+        return "Discuss{" +
+                "discussId=" + discussId +
+                ", typeId=" + typeId +
+                ", statusId=" + statusId +
+                ", createTime=" + createTime +
+                ", modifyTime=" + modifyTime +
+                ", visitNum=" + visitNum +
+                ", attachmentId=" + attachmentId +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", user=" + user +
+                ", voteList=" + voteList +
+                ", replys=" + replys +
+                ", users=" + users +
+                '}';
+    }
 }

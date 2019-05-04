@@ -39,4 +39,86 @@ public class Dept {
 
     private Long deptmanager;
 
+    public Dept() {
+    }
+
+    public Dept(String deptName, String deptTel, String deptFax, String email, String deptAddr, Long deptmanager) {
+
+        this.deptName = deptName;
+        this.deptTel = deptTel;
+        this.deptFax = deptFax;
+        this.email = email;
+        this.deptAddr = deptAddr;
+        this.deptmanager = deptmanager;
+    }
+
+    public Long getDeptId() {
+
+        return deptId;
+    }
+
+    public void setDeptId(Long deptId) {
+        this.deptId = deptId;
+    }
+
+    public String getDeptName() {
+        return deptName;
+    }
+
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
+    }
+
+    public String getDeptTel() {
+        return deptTel;
+    }
+
+    public void setDeptTel(String deptTel) {
+        this.deptTel = deptTel;
+    }
+
+    public String getDeptFax() {
+        return deptFax;
+    }
+
+    public void setDeptFax(String deptFax) {
+        this.deptFax = deptFax;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDeptAddr() {
+        return deptAddr;
+    }
+
+    public void setDeptAddr(String deptAddr) {
+        this.deptAddr = deptAddr;
+    }
+
+    public Long getDeptmanager() {
+        return deptmanager;
+    }
+
+    public void setDeptmanager(Long deptmanager) {
+        this.deptmanager = deptmanager;
+    }
+
+    @Override
+    public String toString() {
+        return "Dept{" +
+                "deptId=" + deptId +
+                ", deptName='" + deptName + '\'' +
+                ", deptTel='" + deptTel + '\'' +
+                ", deptFax='" + deptFax + '\'' +
+                ", email='" + email + '\'' +
+                ", deptAddr='" + deptAddr + '\'' +
+                ", deptmanager=" + deptmanager +
+                '}';
+    }
 }

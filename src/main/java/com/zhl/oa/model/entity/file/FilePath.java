@@ -43,4 +43,77 @@ public class FilePath {
         this.parentId = parentId;
         this.pathName = pathName;
     }
+
+    public FilePath() {
+    }
+
+    public FilePath(Long parentId, String pathName, Long pathIstrash, Long pathUserId, List<FileList> fileList) {
+
+        this.parentId = parentId;
+        this.pathName = pathName;
+        this.pathIstrash = pathIstrash;
+        this.pathUserId = pathUserId;
+        this.fileList = fileList;
+    }
+
+    public Long getId() {
+
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(Long parentId) {
+        this.parentId = parentId;
+    }
+
+    public String getPathName() {
+        return pathName;
+    }
+
+    public void setPathName(String pathName) {
+        this.pathName = pathName;
+    }
+
+    public Long getPathIstrash() {
+        return pathIstrash;
+    }
+
+    public void setPathIstrash(Long pathIstrash) {
+        this.pathIstrash = pathIstrash;
+    }
+
+    public Long getPathUserId() {
+        return pathUserId;
+    }
+
+    public void setPathUserId(Long pathUserId) {
+        this.pathUserId = pathUserId;
+    }
+
+    public List<FileList> getFileList() {
+        return fileList;
+    }
+
+    public void setFileList(List<FileList> fileList) {
+        this.fileList = fileList;
+    }
+
+    @Override
+    public String toString() {
+        return "FilePath{" +
+                "id=" + id +
+                ", parentId=" + parentId +
+                ", pathName='" + pathName + '\'' +
+                ", pathIstrash=" + pathIstrash +
+                ", pathUserId=" + pathUserId +
+                ", fileList=" + fileList +
+                '}';
+    }
 }

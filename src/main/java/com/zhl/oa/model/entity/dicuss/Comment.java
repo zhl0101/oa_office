@@ -34,4 +34,35 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name = "reply_id")
     private Reply reply;
+
+    public Comment() {
+    }
+
+    public String getComment() {
+
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public Comment(Date time, String comment, User user, Reply reply) {
+
+        this.time = time;
+        this.comment = comment;
+        this.user = user;
+        this.reply = reply;
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "commentId=" + commentId +
+                ", time=" + time +
+                ", comment='" + comment + '\'' +
+                ", user=" + user +
+                ", reply=" + reply +
+                '}';
+    }
 }

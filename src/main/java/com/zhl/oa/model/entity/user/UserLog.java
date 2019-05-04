@@ -36,4 +36,76 @@ public class UserLog {
     @JoinColumn(name = "user_id")
     private User user;
 
+    public UserLog() {
+    }
+
+    public UserLog(String ipAddr, String title, String url, Date logTime, User user) {
+
+        this.ipAddr = ipAddr;
+        this.title = title;
+        this.url = url;
+        this.logTime = logTime;
+        this.user = user;
+    }
+
+    public Long getId() {
+
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getIpAddr() {
+        return ipAddr;
+    }
+
+    public void setIpAddr(String ipAddr) {
+        this.ipAddr = ipAddr;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Date getLogTime() {
+        return logTime;
+    }
+
+    public void setLogTime(Date logTime) {
+        this.logTime = logTime;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "UserLog{" +
+                "id=" + id +
+                ", ipAddr='" + ipAddr + '\'' +
+                ", title='" + title + '\'' +
+                ", url='" + url + '\'' +
+                ", logTime=" + logTime +
+                ", user=" + user +
+                '}';
+    }
 }

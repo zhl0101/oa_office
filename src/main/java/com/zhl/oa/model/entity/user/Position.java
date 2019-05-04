@@ -34,4 +34,67 @@ public class Position {
         this.name = name;
         this.level = level;
     }
+
+    public Position() {
+    }
+
+    public Position(String name, Integer level, String describtion, Long deptid) {
+
+        this.name = name;
+        this.level = level;
+        this.describtion = describtion;
+        this.deptid = deptid;
+    }
+
+    public Long getId() {
+
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getLevel() {
+        return level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
+    }
+
+    public String getDescribtion() {
+        return describtion;
+    }
+
+    public void setDescribtion(String describtion) {
+        this.describtion = describtion;
+    }
+
+    public Long getDeptid() {
+        return deptid;
+    }
+
+    public void setDeptid(Long deptid) {
+        this.deptid = deptid;
+    }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", level=" + level +
+                ", describtion='" + describtion + '\'' +
+                ", deptid=" + deptid +
+                '}';
+    }
 }

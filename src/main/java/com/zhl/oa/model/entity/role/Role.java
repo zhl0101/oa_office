@@ -12,7 +12,7 @@ import javax.persistence.*;
  * @Version 1.0
  */
 @Entity
-@Table(name="aoa_role_")
+@Table(name="aoa_role")
 @Data
 public class Role {
 
@@ -27,4 +27,46 @@ public class Role {
     @Column(name="role_value")
     private Integer  roleValue;//角色权限值
 
+    public Role() {
+    }
+
+    public Role(String roleName, Integer roleValue) {
+
+        this.roleName = roleName;
+        this.roleValue = roleValue;
+    }
+
+    public Long getRoleId() {
+
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
+    public Integer getRoleValue() {
+        return roleValue;
+    }
+
+    public void setRoleValue(Integer roleValue) {
+        this.roleValue = roleValue;
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "roleId=" + roleId +
+                ", roleName='" + roleName + '\'' +
+                ", roleValue=" + roleValue +
+                '}';
+    }
 }

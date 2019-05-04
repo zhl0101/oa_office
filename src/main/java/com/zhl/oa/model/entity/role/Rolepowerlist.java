@@ -48,4 +48,50 @@ public class Rolepowerlist {
         this.menuId = menuId;
         this.check = check;
     }
+
+    public Rolepowerlist() {
+    }
+
+    public Long getPkId() {
+
+        return pkId;
+    }
+
+    public void setPkId(Long pkId) {
+        this.pkId = pkId;
+    }
+
+    public Role getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Role roleId) {
+        this.roleId = roleId;
+    }
+
+    public SystemMenu getMenuId() {
+        return menuId;
+    }
+
+    public void setMenuId(SystemMenu menuId) {
+        this.menuId = menuId;
+    }
+
+    public Boolean getCheck() {
+        return check;
+    }
+
+    public void setCheck(Boolean check) {
+        this.check = check;
+    }
+
+    @Override
+    public String toString() {
+        return "Rolepowerlist{" +
+                "pkId=" + pkId +
+                ", roleId=" + roleId +
+                ", menuId=" + menuId +
+                ", check=" + check +
+                '}';
+    }
 }

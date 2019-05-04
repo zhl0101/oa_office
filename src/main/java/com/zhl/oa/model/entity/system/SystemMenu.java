@@ -45,4 +45,96 @@ public class SystemMenu {
     @Column(name = "menu_grade")
     private Integer menuGrade;
 
+    public SystemMenu() {
+    }
+
+    public SystemMenu(Long parentId, String menuName, String menuUrl, String menuIcon, Integer sortId, Boolean show, Integer menuGrade) {
+
+        this.parentId = parentId;
+        this.menuName = menuName;
+        this.menuUrl = menuUrl;
+        this.menuIcon = menuIcon;
+        this.sortId = sortId;
+        this.show = show;
+        this.menuGrade = menuGrade;
+    }
+
+    public Long getMenuId() {
+
+        return menuId;
+    }
+
+    public void setMenuId(Long menuId) {
+        this.menuId = menuId;
+    }
+
+    public Long getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(Long parentId) {
+        this.parentId = parentId;
+    }
+
+    public String getMenuName() {
+        return menuName;
+    }
+
+    public void setMenuName(String menuName) {
+        this.menuName = menuName;
+    }
+
+    public String getMenuUrl() {
+        return menuUrl;
+    }
+
+    public void setMenuUrl(String menuUrl) {
+        this.menuUrl = menuUrl;
+    }
+
+    public String getMenuIcon() {
+        return menuIcon;
+    }
+
+    public void setMenuIcon(String menuIcon) {
+        this.menuIcon = menuIcon;
+    }
+
+    public Integer getSortId() {
+        return sortId;
+    }
+
+    public void setSortId(Integer sortId) {
+        this.sortId = sortId;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public Integer getMenuGrade() {
+        return menuGrade;
+    }
+
+    public void setMenuGrade(Integer menuGrade) {
+        this.menuGrade = menuGrade;
+    }
+
+    @Override
+    public String toString() {
+        return "SystemMenu{" +
+                "menuId=" + menuId +
+                ", parentId=" + parentId +
+                ", menuName='" + menuName + '\'' +
+                ", menuUrl='" + menuUrl + '\'' +
+                ", menuIcon='" + menuIcon + '\'' +
+                ", sortId=" + sortId +
+                ", show=" + show +
+                ", menuGrade=" + menuGrade +
+                '}';
+    }
 }

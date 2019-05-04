@@ -37,4 +37,57 @@ public class VoteTitleUser {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    public VoteTitleUser() {
+    }
+
+    public VoteTitleUser(Long voteId, VoteTitles voteTitles, User user) {
+
+        this.voteId = voteId;
+        this.voteTitles = voteTitles;
+        this.user = user;
+    }
+
+    public Long getVoteTitleUserId() {
+
+        return voteTitleUserId;
+    }
+
+    public void setVoteTitleUserId(Long voteTitleUserId) {
+        this.voteTitleUserId = voteTitleUserId;
+    }
+
+    public Long getVoteId() {
+        return voteId;
+    }
+
+    public void setVoteId(Long voteId) {
+        this.voteId = voteId;
+    }
+
+    public VoteTitles getVoteTitles() {
+        return voteTitles;
+    }
+
+    public void setVoteTitles(VoteTitles voteTitles) {
+        this.voteTitles = voteTitles;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "VoteTitleUser{" +
+                "voteTitleUserId=" + voteTitleUserId +
+                ", voteId=" + voteId +
+                ", voteTitles=" + voteTitles +
+                ", user=" + user +
+                '}';
+    }
 }

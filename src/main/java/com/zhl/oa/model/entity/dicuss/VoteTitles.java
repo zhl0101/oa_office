@@ -36,4 +36,66 @@ public class VoteTitles {
     @JoinColumn(name = "vote_id")
     private VoteList voteList;			//关联投标表      投票id
 
+    public VoteTitles(String title, String color, Set<VoteTitleUser> voteTitleUsers, VoteList voteList) {
+        this.title = title;
+        this.color = color;
+        this.voteTitleUsers = voteTitleUsers;
+        this.voteList = voteList;
+    }
+
+    public VoteTitles() {
+
+    }
+
+    public Long getTitleId() {
+
+        return titleId;
+    }
+
+    public void setTitleId(Long titleId) {
+        this.titleId = titleId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Set<VoteTitleUser> getVoteTitleUsers() {
+        return voteTitleUsers;
+    }
+
+    public void setVoteTitleUsers(Set<VoteTitleUser> voteTitleUsers) {
+        this.voteTitleUsers = voteTitleUsers;
+    }
+
+    public VoteList getVoteList() {
+        return voteList;
+    }
+
+    public void setVoteList(VoteList voteList) {
+        this.voteList = voteList;
+    }
+
+    @Override
+    public String toString() {
+        return "VoteTitles{" +
+                "titleId=" + titleId +
+                ", title='" + title + '\'' +
+                ", color='" + color + '\'' +
+                ", voteTitleUsers=" + voteTitleUsers +
+                ", voteList=" + voteList +
+                '}';
+    }
 }

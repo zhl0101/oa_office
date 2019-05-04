@@ -38,4 +38,76 @@ public class SystemStatusList {
     @Column(name = "sort_precent")
     private String statusPrecent;//百分比
 
+    public SystemStatusList() {
+    }
+
+    public SystemStatusList(String statusName, Integer statusSortValue, String statusModel, String statusColor, String statusPrecent) {
+
+        this.statusName = statusName;
+        this.statusSortValue = statusSortValue;
+        this.statusModel = statusModel;
+        this.statusColor = statusColor;
+        this.statusPrecent = statusPrecent;
+    }
+
+    public Long getStatusId() {
+
+        return statusId;
+    }
+
+    public void setStatusId(Long statusId) {
+        this.statusId = statusId;
+    }
+
+    public String getStatusName() {
+        return statusName;
+    }
+
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
+    }
+
+    public Integer getStatusSortValue() {
+        return statusSortValue;
+    }
+
+    public void setStatusSortValue(Integer statusSortValue) {
+        this.statusSortValue = statusSortValue;
+    }
+
+    public String getStatusModel() {
+        return statusModel;
+    }
+
+    public void setStatusModel(String statusModel) {
+        this.statusModel = statusModel;
+    }
+
+    public String getStatusColor() {
+        return statusColor;
+    }
+
+    public void setStatusColor(String statusColor) {
+        this.statusColor = statusColor;
+    }
+
+    public String getStatusPrecent() {
+        return statusPrecent;
+    }
+
+    public void setStatusPrecent(String statusPrecent) {
+        this.statusPrecent = statusPrecent;
+    }
+
+    @Override
+    public String toString() {
+        return "SystemStatusList{" +
+                "statusId=" + statusId +
+                ", statusName='" + statusName + '\'' +
+                ", statusSortValue=" + statusSortValue +
+                ", statusModel='" + statusModel + '\'' +
+                ", statusColor='" + statusColor + '\'' +
+                ", statusPrecent='" + statusPrecent + '\'' +
+                '}';
+    }
 }

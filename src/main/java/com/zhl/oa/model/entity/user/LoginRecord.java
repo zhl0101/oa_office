@@ -47,4 +47,76 @@ public class LoginRecord {
         this.user = user;
     }
 
+    public LoginRecord() {
+    }
+
+    public LoginRecord(String ipAddr, Date loginTime, String sessionId, String browser, User user) {
+
+        this.ipAddr = ipAddr;
+        this.loginTime = loginTime;
+        this.sessionId = sessionId;
+        this.browser = browser;
+        this.user = user;
+    }
+
+    public Long getId() {
+
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getIpAddr() {
+        return ipAddr;
+    }
+
+    public void setIpAddr(String ipAddr) {
+        this.ipAddr = ipAddr;
+    }
+
+    public Date getLoginTime() {
+        return loginTime;
+    }
+
+    public void setLoginTime(Date loginTime) {
+        this.loginTime = loginTime;
+    }
+
+    public String getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
+
+    public String getBrowser() {
+        return browser;
+    }
+
+    public void setBrowser(String browser) {
+        this.browser = browser;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginRecord{" +
+                "id=" + id +
+                ", ipAddr='" + ipAddr + '\'' +
+                ", loginTime=" + loginTime +
+                ", sessionId='" + sessionId + '\'' +
+                ", browser='" + browser + '\'' +
+                ", user=" + user +
+                '}';
+    }
 }
